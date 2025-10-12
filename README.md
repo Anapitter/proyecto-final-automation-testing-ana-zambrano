@@ -1,8 +1,12 @@
-# Preentrega Automation Testing
+# Proyecto de Automatización de Testing QA
 
-## Pruebas realizadas
-1. Login válido → abre SauceDemo, hace login y cierra el navegador.
-2. Login inválido → muestra mensaje de error al ingresar usuario o contraseña incorrecta.
+Este proyecto contiene las pruebas automatizadas del sitio web [SauceDemo](https://www.saucedemo.com/), realizadas con **Python**, **Pytest** y **Selenium**.
 
-## Cómo ejecutar
-python tests/test_saucedemo.py
+## Estructura del proyecto
+- `tests/` → contiene los archivos de pruebas automatizadas.
+- `pages/` → contiene los Page Objects con la lógica de las páginas.
+- `reports/` → carpeta donde se generan los reportes HTML de ejecución.
+- `conftest.py` → configuración general de Pytest.
+
+## Ejecución del proyecto
+Para ejecutar las pruebas y generar el reporte HTML:
