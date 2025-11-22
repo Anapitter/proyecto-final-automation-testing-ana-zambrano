@@ -1,0 +1,17 @@
+[
+    {
+        "Nombre": "Sauce Labs Backpack",
+        "Precio": 29.99,
+        "Descripción": "Una mochila practica"
+    },
+    {
+        "Nombre": "Sauce Labs Bicke light",
+        "Precio": 9.99,
+        "Descripción": "Luz para bicicleta"
+    },
+    {
+        "Nombre": "Sauce Labs Bolt T-Shirt",
+        "Precio": 15.99,
+        "Descripción": "Camiseta con diseño unico"
+    }
+]

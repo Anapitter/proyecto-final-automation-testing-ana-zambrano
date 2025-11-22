@@ -1,0 +1,5 @@
+usuario,password,expected_result
+standard_user,secret_sauce,True
+locked_out_user,secret_sauce,False
+, ,False
+invalid_user,invalid_pass,False
