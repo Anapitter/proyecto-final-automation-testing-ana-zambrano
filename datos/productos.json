@@ -1,17 +1,20 @@
-[
-    {
-        "Nombre": "Sauce Labs Backpack",
-        "Precio": 29.99,
-        "Descripción": "Una mochila practica"
-    },
-    {
-        "Nombre": "Sauce Labs Bicke light",
-        "Precio": 9.99,
-        "Descripción": "Luz para bicicleta"
-    },
-    {
-        "Nombre": "Sauce Labs Bolt T-Shirt",
-        "Precio": 15.99,
-        "Descripción": "Camiseta con diseño unico"
-    }
-]
+{
+    "productos": [
+        {
+            "nombre": "Sauce Labs Backpack",
+            "descripcion": "Mochila de alta calidad.",
+            "precio": 29.99
+        },
+        {
+            "nombre": "Sauce Labs Bike Light",
+            "descripcion": "Luz para bicicleta.",
+            "precio": 9.99
+        },
+        {
+            "nombre": "Sauce Labs Bolt T-Shirt",
+            "descripcion": "Camiseta de rayo.",
+            "precio": 15.99
+        }
+    ]
+}
+
