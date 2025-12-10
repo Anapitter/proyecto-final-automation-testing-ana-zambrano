@@ -1,6 +1,7 @@
 import pytest
 from utils.lector_json import leer_json_productos
 
+
 # ===============================
 # FIXTURE PARA CARGAR PRODUCTOS
 # ===============================

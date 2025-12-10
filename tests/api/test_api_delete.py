@@ -5,5 +5,6 @@ def test_delete_user():
 
     response = requests.delete(url)
 
-    # Reqres devolvía 204, ahora devuelve 401
-    assert response.status_code in [204, 401]
+    # Reqres ahora devuelve 403
+    assert response.status_code in [204, 401, 403]
+

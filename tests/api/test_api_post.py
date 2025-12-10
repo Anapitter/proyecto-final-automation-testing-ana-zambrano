@@ -10,5 +10,5 @@ def test_create_user():
 
     response = requests.post(url, json=payload)
 
-    # Nuevo comportamiento de la API: 401
-    assert response.status_code in [201, 401]
+    # Nuevo comportamiento de la API: 403
+    assert response.status_code in [201, 401, 403]

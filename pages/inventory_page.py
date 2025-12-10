@@ -3,9 +3,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException # Importa la excepción específica
 
+
+
 class InventoryPage:
     """Clase Page Object para la página de Inventario de Sauce Labs."""
-    
+
     # Selectors
     PRODUCT_ITEMS = (By.CLASS_NAME, "inventory_item")
     PRODUCT_NAME = (By.CLASS_NAME, "inventory_item_name")
@@ -63,7 +65,7 @@ class InventoryPage:
             return int(badge.text)
         except NoSuchElementException:
             # Si el elemento 'CART_BADGE' no existe (carrito vacío), retornamos 0.
-            return 0 
+            return 0
         except ValueError:
             # Si el texto del badge no puede convertirse a entero
             print("Advertencia: El contador del carrito no es un número válido.")

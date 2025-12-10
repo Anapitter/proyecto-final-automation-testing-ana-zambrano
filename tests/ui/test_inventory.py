@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import pytest
 
+
 from pages.inventory_page import InventoryPage
 
 # PARAMETRIZACIÓN QUE QUIERE TU PROFESOR

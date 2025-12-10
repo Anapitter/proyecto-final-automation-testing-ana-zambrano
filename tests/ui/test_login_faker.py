@@ -3,6 +3,7 @@ import pytest
 from faker import Faker
 from pages.login_page import LoginPage # <--- ¡IMPORTANTE! Importar el Page Object
 
+
 fake = Faker()
 
 # Las credenciales de Faker siempre fallarán en Sauce Labs.
