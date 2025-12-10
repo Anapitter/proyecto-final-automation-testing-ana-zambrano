@@ -1,4 +1,0 @@
-
-def saludar(nombre):
-   mensaje 
-
