@@ -23,20 +23,20 @@ Este proyecto constituye un **framework completo de automatización de pruebas**
 
 ## 📋 Tabla de Contenidos
 
-- [Propósito del Proyecto](#propósito-del-proyecto)
-- [Tabla de Contenidos](#tabla-de-contenidos)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Requisitos Previos](#requisitos-previos)
-- [Instalación](#instalación)
-- [Ejecución de Pruebas](#ejecución-de-pruebas)
-- [Pruebas UI](#pruebas-ui-selenium-webdriver)
-- [Pruebas API](#pruebas-api-requests)
-- [Reportes HTML](#reportes-html)
-- [Sistema de Logging](#sistema-de-logging)
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Solución de Problemas](#solución-de-problemas)
-- [Contacto](#contacto)
+- Proposito del Proyecto
+- Tabla de Contenidos
+- Tecnologias Utilizadas
+- Estructura del Proyecto
+- Requisitos Previos
+- Instalacion
+- Ejecucion de Pruebas
+- Pruebas UI
+- Pruebas API
+- Reportes HTML
+- Sistema de Logging
+- Capturas de Pantalla
+- Solucion de Problemas
+- Contacto
 
 ---
 
@@ -234,7 +234,7 @@ pytest -v -s --log-cli-level=DEBUG
 
 ### Sitio Web Automatizado
 
-**SauceDemo:** https://www.saucedemo.com/
+**SauceDemo:** [saucedemo.com](https://www.saucedemo.com/)
 
 Se han automatizado **5+ casos de prueba** cubriendo flujos completos:
 
@@ -250,6 +250,7 @@ Parametrizado con datos desde `datos/data_login.csv`:
 | 4 | `invalid_user` | `invalid_pass` | ❌ Credenciales incorrectas |
 
 **Implementación:**
+
 - Uso de fixture `login_in_driver` (factory pattern)
 - Validación de mensajes de error
 - Captura automática en fallos
@@ -261,6 +262,7 @@ Parametrizado con datos desde `datos/data_login.csv`:
 - **test_producto_en_carrito:** Valida que el producto está en el carrito
 
 **Características:**
+
 - Flujo completo: login → inventario → carrito
 - Validación de contador de carrito
 - Parametrizado con múltiples usuarios
@@ -285,6 +287,7 @@ Carga datos desde `datos/productos.json`:
 - **Caso 2:** Agrega múltiples productos del JSON
 
 **Implementación:**
+
 - Fixture `productos_json` que carga el archivo
 - Lectura mediante `utils/lector_json.py`
 - Validación en carrito
@@ -302,6 +305,7 @@ password = fake.password()   # Contraseña aleatoria
 - **Caso 2:** Validación de mensaje de error "Epic sadface"
 
 **Implementación:**
+
 - Generador de datos dinámicos
 - Sin necesidad de archivos de datos
 - Prueba robustez del sistema
@@ -350,6 +354,7 @@ class CartPage:
 ```
 
 **Beneficios:**
+
 - ✅ Reutilización de código
 - ✅ Fácil mantenimiento
 - ✅ Cambios en UI sin afectar tests
@@ -361,7 +366,7 @@ class CartPage:
 
 ### API Pública Utilizada
 
-**ReqRes:** https://reqres.in/
+**ReqRes:** [reqres.in](https://reqres.in/)
 
 Se implementaron **3 casos de prueba** con diferentes métodos HTTP:
 
@@ -372,6 +377,7 @@ GET https://reqres.in/api/users?page=2
 ```
 
 **Validaciones:**
+
 - ✅ Código de estado HTTP (200 o 403)
 - ✅ Estructura de respuesta JSON
 - ✅ Presencia de datos de usuario
@@ -389,6 +395,7 @@ Content-Type: application/json
 ```
 
 **Validaciones:**
+
 - ✅ Creación de recurso (201)
 - ✅ ID asignado en respuesta
 - ✅ Timestamp de creación
@@ -400,6 +407,7 @@ DELETE https://reqres.in/api/users/2
 ```
 
 **Validaciones:**
+
 - ✅ Eliminación correcta (204)
 - ✅ Sin contenido en respuesta
 
