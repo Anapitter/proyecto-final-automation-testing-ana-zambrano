@@ -31,6 +31,7 @@
 ### 1. TECNOLOGÍAS UTILIZADAS ✅
 
 **Requerido:**
+
 - ✅ Python 3.12
 - ✅ Pytest 9.0.2
 - ✅ Selenium 4.39.0
@@ -38,6 +39,7 @@
 - ✅ Git
 
 **Instaladas:**
+
 - ✅ pytest-html 4.1.1
 - ✅ pytest-metadata 3.1.1
 - ✅ webdriver-manager 4.0.2
@@ -49,7 +51,8 @@
 ### 2. ORGANIZACIÓN DEL CÓDIGO ✅
 
 **Estructura requerida:**
-```
+
+```text
 ✅ pages/           → Page Objects (POM)
 ✅ tests/ui/        → Pruebas de UI
 ✅ tests/api/       → Pruebas de API
@@ -60,6 +63,7 @@
 ```
 
 **Características implementadas:**
+
 - ✅ Estructura clara y jerárquica
 - ✅ Nombres significativos (clases, métodos, variables)
 - ✅ Comentarios descriptivos
@@ -71,6 +75,7 @@
 ### 3. PRUEBAS DE UI - SELENIUM ✅
 
 **Requerimientos:**
+
 - ✅ **5+ casos de prueba** → 8 casos implementados
 - ✅ **Flujos completos** → login → inventario → carrito
 - ✅ **Escenarios negativos** → credenciales inválidas, usuario bloqueado
@@ -79,6 +84,7 @@
 **Casos Implementados:**
 
 #### test_login.py (4 casos)
+
 1. Login exitoso con `standard_user`
 2. Login fallido con `locked_out_user` (usuario bloqueado)
 3. Login fallido con credenciales vacías
@@ -87,24 +93,29 @@
 **Fuente:** `datos/data_login.csv`
 
 #### test_inventory.py (3 casos)
+
 1. Verificar productos disponibles
 2. Agregar producto al carrito
 3. Validar producto en carrito
 
 #### test_cart.py (1 caso)
+
 1. Navegación y validación de carrito
 
 #### test_cart_json.py (2 casos)
+
 1. Agregar primer producto del JSON
 2. Agregar múltiples productos del JSON
 
 **Fuente:** `datos/productos.json`
 
 #### test_login_faker.py (2 casos)
+
 1. Login con usuario Faker (debe fallar)
 2. Validación de mensaje de error
 
 **Resultado de ejecución:**
+
 - ✅ 13 casos PASSED
 - ⏭️ 2 casos SKIPPED (JSON fixture condition)
 
@@ -143,6 +154,7 @@ class CartPage:
 ```
 
 **Beneficios logrados:**
+
 - ✅ Separación clara: localizadores vs lógica
 - ✅ Reutilización máxima
 - ✅ Mantenimiento simplificado
@@ -153,6 +165,7 @@ class CartPage:
 ### 5. PRUEBAS DE API ✅
 
 **Requerimientos:**
+
 - ✅ **3+ casos** → Exactamente 3 casos
 - ✅ **Métodos HTTP** → GET, POST, DELETE
 - ✅ **Validación de respuestas** → Status code, estructura JSON
@@ -161,26 +174,33 @@ class CartPage:
 **Casos Implementados:**
 
 #### test_api_get.py
+
 ```http
 GET https://reqres.in/api/users?page=2
 ```
+
 - Valida: `response.status_code in [200, 403]`
 
 #### test_api_post.py
+
 ```http
 POST https://reqres.in/api/users
 Body: {"name": "Carolina", "job": "Automation Tester"}
 ```
+
 - Valida: Status 201 (creación exitosa)
 - Verifica: `id` en respuesta
 
 #### test_api_delete.py
+
 ```http
 DELETE https://reqres.in/api/users/2
 ```
+
 - Valida: Status 204 (eliminación correcta)
 
 **Resultado:**
+
 - ✅ 3 casos PASSED
 
 ---
@@ -188,6 +208,7 @@ DELETE https://reqres.in/api/users/2
 ### 6. GENERACIÓN DE REPORTES ✅
 
 **Reportes HTML:**
+
 - ✅ Generados con `pytest-html 4.1.1`
 - ✅ Timestamp en nombre: `report_YYYYMMDD_HHMMSS.html`
 - ✅ Incluye:
@@ -198,7 +219,8 @@ DELETE https://reqres.in/api/users/2
   - 📅 Metadata del sistema
 
 **Ejemplo generado:**
-```
+
+```text
 reports/report_20251210_232959.html
 ✅ 13 passed, 2 skipped in 133.47s
 ```
@@ -208,19 +230,22 @@ reports/report_20251210_232959.html
 ### 7. SISTEMA DE LOGGING ✅
 
 **Implementación:**
+
 - ✅ Archivo: `utils/logger.py`
 - ✅ Dual handler: archivo + consola
 - ✅ Niveles: DEBUG (file), INFO (console)
 - ✅ Formato ISO con timestamp
 
 **Almacenamiento:**
-```
+
+```text
 logs/
 ├── app_2025-12-10_23-10-18.log
 └── app_2025-12-10_23-32-59.log
 ```
 
 **Uso en código:**
+
 ```python
 from utils.logger import logger
 
@@ -234,13 +259,15 @@ logger.error("Elemento no encontrado")
 ### 8. CAPTURAS DE PANTALLA ✅
 
 **Implementación:**
+
 - ✅ Hook pytest: `pytest_runtest_makereport`
 - ✅ Captura automática en **fallos**
 - ✅ Nombre descriptivo: `test_name_YYYYMMDD_HHMMSS.png`
 - ✅ Incluidas en reportes HTML
 
 **Almacenamiento:**
-```
+
+```text
 screenshots/
 ├── test_login_validation_20251210_232959.png
 └── test_agregar_producto_20251210_233010.png
@@ -251,6 +278,7 @@ screenshots/
 ### 9. CONTROL DE VERSIONES ✅
 
 **Git History:**
+
 - ✅ Repositorio público en GitHub
 - ✅ 10+ commits documentados
 - ✅ Mensajes convencionales (docs:, chore:, test:)
@@ -258,6 +286,7 @@ screenshots/
 - ✅ Nombre correcto: `proyecto-final-automation-testing-ana-zambrano`
 
 **Commits recientes:**
+
 ```bash
 f51fb19 docs: complete README.md and add Git Bash launch scripts
 312cdd1 docs: fix SETUP.md markdown lint errors
@@ -271,6 +300,7 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 ### 10. DOCUMENTACIÓN (README.md) ✅
 
 **Contenido requerido:**
+
 - ✅ Propósito del proyecto
 - ✅ Tecnologías utilizadas (tabla)
 - ✅ Estructura del proyecto (árbol)
@@ -281,6 +311,7 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 - ✅ Contacto del autor
 
 **Secciones adicionales implementadas:**
+
 - ✅ Guía de Git Bash
 - ✅ Descripción detallada de POM
 - ✅ Explicación de cada test
@@ -297,10 +328,12 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 ### 1. Scripts para abrir Git Bash ✅
 
 **Implementados:**
+
 - ✅ `open_in_gitbash.bat` (Windows CMD)
 - ✅ `open_in_gitbash.ps1` (Windows PowerShell)
 
 **Funcionamiento:**
+
 - Abre Git Bash automáticamente en el repositorio
 - Incluye validación y mensajes de error
 - Manejo de permisos en PowerShell
@@ -308,6 +341,7 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 ### 2. Guía de Configuración VS Code ✅
 
 **SETUP.md:**
+
 - ✅ Pasos para instalar Pylance
 - ✅ Configuración del intérprete Python
 - ✅ Activación de autocompletado
@@ -317,6 +351,7 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 ### 3. Configuración de Workspace ✅
 
 **vscode/settings.json:**
+
 - ✅ Pylance language server
 - ✅ Git Bash como terminal default
 - ✅ Autocompletado tab completion
@@ -324,6 +359,7 @@ f51fb19 docs: complete README.md and add Git Bash launch scripts
 - ✅ Python interpreter path
 
 **vscode/extensions.json:**
+
 - ✅ Recomendaciones: Python, Pylance
 
 ---
@@ -370,6 +406,6 @@ El proyecto **"proyecto-final-automation-testing-ana-zambrano"** cumple **comple
 
 ---
 
-**Repositorio:** https://github.com/Anapitter/proyecto-final-automation-testing-ana-zambrano
+**Repositorio:** [proyecto-final-automation-testing-ana-zambrano](https://github.com/Anapitter/proyecto-final-automation-testing-ana-zambrano)
 
 **Estado:** Listo para entrega ✨
