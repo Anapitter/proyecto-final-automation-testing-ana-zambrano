@@ -1,6 +1,49 @@
 {
+    // Python / Pylance
     "python.languageServer": "Pylance",
-    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    // Ajusta al entorno virtual usado en este proyecto (si usas 'venv' cambia la ruta si fuera distinta)
+    "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
     "python.analysis.indexing": true,
-    "python.analysis.autoImportCompletions": true
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "off",
+
+    // Editor: autocompletado y ayuda
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.tabCompletion": "on",
+    "editor.suggestSelection": "first",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+
+    // Terminal: cambiar a Git Bash por defecto en Windows
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe"
+        },
+        "Git Bash": {
+            // Ruta común para Git Bash (ajusta si tu instalación está en otra carpeta)
+            "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["--login", "-i"]
+        }
+    },
+
+    // Excluir artefactos del explorador
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.venv": true,
+        "**/venv": true,
+        "**/.pytest_cache": true,
+        "reports": true,
+        "screenshots": true,
+        "logs": true
+    }
 }

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Entornos
+.venv/
+venv/
+nuevo_entorno/
+
+# Reportes y artefactos
+reports/
+screenshots/
+*.log
+*.html
+
+# VS Code
+.vscode/
