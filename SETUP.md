@@ -3,6 +3,7 @@
 ## ✅ Estado Actual
 
 Tu proyecto está **correctamente configurado** para:
+
 - ✨ Autocompletado inteligente con Pylance
 - 🎯 Terminal Git Bash integrada
 - 📦 Gestión automática de dependencias Python
@@ -19,6 +20,7 @@ Cuando abras el proyecto en VS Code, verás una notificación en la esquina infe
 > "This workspace has extension recommendations"
 
 **Haz clic en "Install All"** para instalar:
+
 - `Python` (Microsoft)
 - `Pylance` (Microsoft)
 
@@ -35,12 +37,15 @@ O instala manualmente:
 1. Abre la paleta de comandos: `Ctrl + Shift + P`
 2. Escribe: `Python: Select Interpreter`
 3. Busca y elige:
-   ```
+
+   ```text
    ./venv/Scripts/python.exe
    ```
+
    (O la carpeta `venv` en tu proyecto)
 
 **Alternativa visual:**
+
 - Mira la esquina inferior derecha de VS Code
 - Haz clic donde dice "Python 3.x.x"
 - Selecciona el intérprete `./venv/Scripts/python.exe`
@@ -62,18 +67,22 @@ Después de instalar Pylance:
 Una vez completados los pasos anteriores, tendrás:
 
 ### 🎯 Autocompletado Inteligente
+
 - Presiona `Ctrl + Space` en cualquier editor para ver sugerencias
 - Las sugerencias aparecen automáticamente mientras escribes
 
 ### 📚 Información de Funciones
+
 - Pasa el ratón sobre cualquier función para ver su documentación
 - Pylance mostrará parámetros y tipos automáticamente
 
 ### 🔍 Análisis de Errores en Tiempo Real
+
 - Errores de sintaxis subrayan en rojo
 - Importaciones no resueltas aparecen destacadas
 
 ### 🎨 Formato Automático
+
 - `formatOnSave` activado: se formatea al guardar (`Ctrl + S`)
 - `formatOnType` activado: se formatea mientras escribes
 
@@ -83,16 +92,20 @@ Una vez completados los pasos anteriores, tendrás:
 
 1. Abre cualquier archivo Python (ej: `pages/login_page.py`)
 2. Escribe:
+
    ```python
    from selenium
    ```
+
 3. Presiona `Ctrl + Space`
 4. Deberías ver sugerencias de `selenium`
 
 5. Escribe más:
+
    ```python
    from selenium.webdriver.common.by import By
    ```
+
 6. Al escribir `By.`, presiona `Ctrl + Space` y verás todas las opciones
 
 ---
@@ -104,6 +117,7 @@ VS Code ahora abre **Git Bash** por defecto:
 1. Presiona `` Ctrl + ` `` para abrir la terminal integrada
 2. Deberías ver `bash-x.y.z$` en lugar de PowerShell
 3. Puedes ejecutar comandos bash directamente:
+
    ```bash
    python run_tests.py
    pytest -v
@@ -139,6 +153,8 @@ VS Code ahora abre **Git Bash** por defecto:
 
 ---
 
+---
+
 ## 📖 Referencias
 
 - [Documentación de Pylance](https://github.com/microsoft/pylance-release)
@@ -162,3 +178,4 @@ Deberías ver versiones sin errores.
 ---
 
 **¡Listo!** Ahora tienes un entorno de desarrollo completamente configurado con autocompletado inteligente, formateo automático y terminal Git Bash integrada. 🚀
+
