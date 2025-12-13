@@ -8,21 +8,13 @@ def test_inventory(login_in_driver, username, password):
     driver = login_in_driver(username, password)
     inventory_page = InventoryPage(driver)
 
-    try:
-        # Agregar primer producto
-        inventory_page.agregar_primer_producto(0)
+    # Agregar primer producto
+    inventory_page.agregar_primer_producto(0)
 
-        # Abrir carrito
-        inventory_page.abrir_carrito()
+    # Abrir carrito
+    inventory_page.abrir_carrito()
 
-        # Validar el producto en el carrito
-        cart_page = CartPage(driver)
-        productos_carrito = cart_page.obtener_nombres_productos_carrito()
-        assert len(productos_carrito) == 1, "El carrito no tiene el producto agregado"
-
-    except Exception as e:
-        print(f"Error durante el test de inventario: {e}")
-        raise
-
-    finally:
-        driver.quit()
+    # Validar el producto en el carrito
+    cart_page = CartPage(driver)
+    productos_carrito = cart_page.obtener_nombres_productos_carrito()
+    assert len(productos_carrito) == 1, "El carrito no tiene el producto agregado"

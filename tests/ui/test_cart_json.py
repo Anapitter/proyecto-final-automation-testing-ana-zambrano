@@ -36,28 +36,24 @@ def test_agregar_producto_por_nombre_json(login_in_driver, username, password, p
     """
     driver = login_in_driver(username, password)
     
-    try:
-        inventory_page = InventoryPage(driver)
-        
-        # Obtener el primer producto del JSON
-        primer_producto = productos_json[0]
-        
-        # Agregar el producto al carrito por su nombre
-        inventory_page.agregar_producto_por_nombre(primer_producto)
-        
-        # Verificar que se agregó
-        conteo = inventory_page.obtener_conteo_carrito()
-        assert conteo == 1, f"Se esperaba 1 producto, pero se encontraron {conteo}"
-        
-        # Abrir carrito y validar
-        inventory_page.abrir_carrito()
-        cart_page = CartPage(driver)
-        productos_en_carrito = cart_page.obtener_nombres_productos_carrito()
-        
-        assert primer_producto in productos_en_carrito, f"El producto '{primer_producto}' no está en el carrito"
-        
-    finally:
-        driver.quit()
+    inventory_page = InventoryPage(driver)
+
+    # Obtener el primer producto del JSON
+    primer_producto = productos_json[0]
+
+    # Agregar el producto al carrito por su nombre
+    inventory_page.agregar_producto_por_nombre(primer_producto)
+
+    # Verificar que se agregó
+    conteo = inventory_page.obtener_conteo_carrito()
+    assert conteo == 1, f"Se esperaba 1 producto, pero se encontraron {conteo}"
+
+    # Abrir carrito y validar
+    inventory_page.abrir_carrito()
+    cart_page = CartPage(driver)
+    productos_en_carrito = cart_page.obtener_nombres_productos_carrito()
+
+    assert primer_producto in productos_en_carrito, f"El producto '{primer_producto}' no está en el carrito"
 
 
 @pytest.mark.parametrize("username,password", [("standard_user", "secret_sauce")])
@@ -67,26 +63,22 @@ def test_agregar_multiples_productos_json(login_in_driver, username, password, p
     """
     driver = login_in_driver(username, password)
     
-    try:
-        inventory_page = InventoryPage(driver)
-        
-        # Agregar los primeros dos productos del JSON
-        productos_a_agregar = productos_json[:2]
-        
-        for producto in productos_a_agregar:
-            inventory_page.agregar_producto_por_nombre(producto)
-        
-        # Verificar que se agregaron ambos
-        conteo = inventory_page.obtener_conteo_carrito()
-        assert conteo == len(productos_a_agregar), f"Se esperaban {len(productos_a_agregar)} productos, pero se encontraron {conteo}"
-        
-        # Abrir carrito y validar
-        inventory_page.abrir_carrito()
-        cart_page = CartPage(driver)
-        productos_en_carrito = cart_page.obtener_nombres_productos_carrito()
-        
-        for producto in productos_a_agregar:
-            assert producto in productos_en_carrito, f"El producto '{producto}' no está en el carrito"
-        
-    finally:
-        driver.quit()
+    inventory_page = InventoryPage(driver)
+
+    # Agregar los primeros dos productos del JSON
+    productos_a_agregar = productos_json[:2]
+
+    for producto in productos_a_agregar:
+        inventory_page.agregar_producto_por_nombre(producto)
+
+    # Verificar que se agregaron ambos
+    conteo = inventory_page.obtener_conteo_carrito()
+    assert conteo == len(productos_a_agregar), f"Se esperaban {len(productos_a_agregar)} productos, pero se encontraron {conteo}"
+
+    # Abrir carrito y validar
+    inventory_page.abrir_carrito()
+    cart_page = CartPage(driver)
+    productos_en_carrito = cart_page.obtener_nombres_productos_carrito()
+
+    for producto in productos_a_agregar:
+        assert producto in productos_en_carrito, f"El producto '{producto}' no está en el carrito"
