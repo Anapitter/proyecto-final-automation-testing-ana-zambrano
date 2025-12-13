@@ -752,6 +752,3 @@ Este proyecto es parte del curso de **Automatización Testing & QA** y está dis
 ### Conclusión
 
 Gracias por revisar este proyecto. Espero que demuestre las habilidades adquiridas en automatización testing.
-
-🚀
-
