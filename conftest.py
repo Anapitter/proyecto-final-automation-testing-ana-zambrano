@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 import os
 
-# Carpeta de capturas
-SCREENSHOT_DIR = os.path.join(os.getcwd(), "screenshots")
+# Carpeta de capturas (usar la carpeta `Screenshot` para evidencias solicitada por el usuario)
+SCREENSHOT_DIR = os.path.join(os.getcwd(), "Screenshot")
 os.makedirs(SCREENSHOT_DIR, exist_ok=True)
 
 @pytest.fixture
