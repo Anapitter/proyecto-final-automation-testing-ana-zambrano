@@ -1,5 +1,25 @@
 # Python
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# Reports and temporary files
+reports/
+*.html
+*.pdf
+
+# OS files
+Thumbs.db
+.DS_Store
+# Python
+__pycache__/
 *.pyc
 
 # Entornos
