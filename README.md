@@ -1,48 +1,46 @@
-# 🚀 Proyecto Final - Framework de Automatización de Pruebas
+## Proyecto Final - Framework de Automatización de Pruebas
 
-**Autora:** Ana Carolina Zambrano
+**Autora:** Ana Laura Zambrano
 
 **Fecha:** Diciembre 2025
 
 **Repositorio:** [proyecto-final-automation-testing-ana-zambrano](https://github.com/Anapitter/proyecto-final-automation-testing-ana-zambrano)
 
----
 
-## 📖 Propósito del Proyecto
+## Propósito del Proyecto
 
 Este proyecto constituye un **framework completo de automatización de pruebas** que integra todos los conocimientos adquiridos en el curso de Testing & QA. El objetivo es demostrar:
 
-✅ Automatización robusta de **Pruebas UI** con Selenium WebDriver  
-✅ Automatización completa de **Pruebas de API** con Requests  
-✅ Aplicación del patrón **Page Object Model**  
-✅ Implementación de **buenas prácticas** de código  
-✅ Generación de **reportes visuales** detallados  
-✅ Gestión profesional con **Git y GitHub**  
+Automatización robusta de **Pruebas UI** con Selenium WebDriver  
+Automatización completa de **Pruebas de API** con Requests  
+Aplicación del patrón **Page Object Model**  
+Implementación de **buenas prácticas** de código  
+Generación de **reportes visuales** detallados  
+Gestión profesional con **Git y GitHub**  
 
 ---
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
-- Proposito del Proyecto
+- Propósito del Proyecto
 - Tabla de Contenidos
-- Tecnologias Utilizadas
+- Tecnologías Utilizadas
 - Estructura del Proyecto
 - Requisitos Previos
-- Instalacion
-- Ejecucion de Pruebas
+- Instalación
+- Ejecución de Pruebas
 - Pruebas UI
 - Pruebas API
 - Reportes HTML
 - Sistema de Logging
 - Capturas de Pantalla
-- Solucion de Problemas
+- Solución de Problemas
 - Contacto
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
-```text
 entrega-final-automation-testing-ana-zambrano/
 │
 ├── conftest.py                 # Configuración de fixtures de pytest
@@ -91,7 +89,7 @@ entrega-final-automation-testing-ana-zambrano/
 
 ---
 
-## 🛠 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 | Tecnología | Versión | Propósito |
 |:--|:--|:--|
@@ -108,7 +106,7 @@ entrega-final-automation-testing-ana-zambrano/
 
 ---
 
-## ✅ Requisitos Previos
+## Requisitos Previos
 
 - Python 3.12 o superior
 - Navegador Chrome instalado (para Selenium)
@@ -118,7 +116,7 @@ entrega-final-automation-testing-ana-zambrano/
 
 ---
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Clonar el repositorio
 
@@ -129,25 +127,20 @@ cd proyecto-final-automation-testing-ana-zambrano
 
 ### 2. Crear entorno virtual
 
+Se recomienda usar el nombre de entorno `.venv` (coincide con el `.gitignore` del proyecto).
+
 **Windows (PowerShell):**
 
 ```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 ```
 
-**Windows (CMD):**
-
-```cmd
-python -m venv venv
-venv\Scripts\activate.bat
-```
-
-**macOS/Linux:**
+**macOS / Linux:**
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 ### 3. Instalar dependencias
@@ -158,7 +151,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔧 Abrir Git Bash en el Repositorio
+## Abrir Git Bash en el Repositorio
 
 Se incluyen dos scripts para abrir Git Bash automáticamente desde el repositorio:
 
@@ -184,7 +177,7 @@ Luego ejecuta nuevamente el script.
 
 ---
 
-## 🧪 Ejecución de Pruebas
+## Ejecución de Pruebas
 
 ### Ejecutar todas las pruebas
 
@@ -230,7 +223,7 @@ pytest -v -s --log-cli-level=DEBUG
 
 ---
 
-## 🎯 Pruebas UI — Selenium WebDriver
+## Pruebas UI — Selenium WebDriver
 
 ### Sitio Web Automatizado
 
@@ -244,14 +237,14 @@ Parametrizado con datos desde `datos/data_login.csv`:
 
 | Caso | Usuario | Contraseña | Resultado Esperado |
 |:--|:--|:--|:--|
-| 1 | `standard_user` | `secret_sauce` | ✅ Login exitoso |
-| 2 | `locked_out_user` | `secret_sauce` | ❌ Usuario bloqueado |
-| 3 | (vacío) | (vacío) | ❌ Credenciales requeridas |
-| 4 | `invalid_user` | `invalid_pass` | ❌ Credenciales incorrectas |
+| 1 | `standard_user` | `secret_sauce` |  Login exitoso |
+| 2 | `locked_out_user` | `secret_sauce` |  Usuario bloqueado |
+| 3 | (vacío) | (vacío) |  Credenciales requeridas |
+| 4 | `invalid_user` | `invalid_pass` |  Credenciales incorrectas |
 
 **Implementación:**
 
-- Uso de fixture `login_in_driver` (factory pattern)
+- Uso de fixture `login_in_driver` (patrón *factory* / factory pattern)
 - Validación de mensajes de error
 - Captura automática en fallos
 
@@ -312,7 +305,7 @@ password = fake.password()   # Contraseña aleatoria
 
 ---
 
-## 🔐 Patrón Page Object Model (POM)
+## Patrón Page Object Model (POM)
 
 La estructura **pages/** implementa el patrón POM para máxima mantenibilidad:
 
@@ -355,14 +348,14 @@ class CartPage:
 
 **Beneficios:**
 
-- ✅ Reutilización de código
-- ✅ Fácil mantenimiento
-- ✅ Cambios en UI sin afectar tests
-- ✅ Mejor legibilidad
+-Reutilización de código
+-Fácil mantenimiento
+-Cambios en UI sin afectar tests
+-Mejor legibilidad
 
 ---
 
-## 📡 Pruebas API — Requests
+## Pruebas API — Requests
 
 ### API Pública Utilizada
 
@@ -378,9 +371,9 @@ GET https://reqres.in/api/users?page=2
 
 **Validaciones:**
 
-- ✅ Código de estado HTTP (200 o 403)
-- ✅ Estructura de respuesta JSON
-- ✅ Presencia de datos de usuario
+- Código de estado HTTP (200 o 403)
+- Estructura de respuesta JSON
+- Presencia de datos de usuario
 
 ### 2. **test_api_post.py** — POST
 
@@ -396,9 +389,9 @@ Content-Type: application/json
 
 **Validaciones:**
 
-- ✅ Creación de recurso (201)
-- ✅ ID asignado en respuesta
-- ✅ Timestamp de creación
+- Creación de recurso (201)
+- ID asignado en respuesta
+- Timestamp de creación
 
 ### 3. **test_api_delete.py** — DELETE
 
@@ -408,12 +401,12 @@ DELETE https://reqres.in/api/users/2
 
 **Validaciones:**
 
-- ✅ Eliminación correcta (204)
-- ✅ Sin contenido en respuesta
+- Eliminación correcta (204)
+- Sin contenido en respuesta
 
 ---
 
-## 📈 Reportes HTML
+## Reportes HTML
 
 Los reportes se generan con **pytest-html** en la carpeta `reports/`:
 
@@ -426,11 +419,11 @@ Ejemplo: report_20251210_231018.html
 
 ### Contenido del Reporte
 
-- 📊 Resumen general (total, pasados, fallidos, skipped)
-- 🔍 Detalle de cada test (duración, estado)
-- 📸 Screenshots para pruebas fallidas
-- 📋 Logs y trazas de error
-- 📅 Timestamp de ejecución
+- Resumen general (total, pasados, fallidos, skipped)
+- Detalle de cada test (duración, estado)
+- Screenshots para pruebas fallidas
+- Logs y trazas de error
+- Timestamp de ejecución
 
 ### Abrir el Reporte
 
@@ -447,17 +440,17 @@ xdg-open reports/report_20251210_231018.html
 
 ---
 
-## 📝 Sistema de Logging
+## Sistema de Logging
 
 Implementado en `utils/logger.py` con configuración centralizada:
 
 ### Niveles de Log
 
-- 🔴 **CRITICAL:** Errores críticos del sistema
-- 🟠 **ERROR:** Errores en ejecución
-- 🟡 **WARNING:** Advertencias
-- 🟢 **INFO:** Información general (default console)
-- 🔵 **DEBUG:** Detalles técnicos (default file)
+- **CRITICAL:** Errores críticos del sistema
+- **ERROR:** Errores en ejecución
+- **WARNING:** Advertencias
+- **INFO:** Información general (default console)
+- **DEBUG:** Detalles técnicos (default file)
 
 ### Almacenamiento
 
@@ -480,16 +473,16 @@ logger.error("Elemento no encontrado: login-button")
 
 ---
 
-## 📸 Capturas de Pantalla
+## Capturas de Pantalla
 
 Implementadas en `conftest.py` con hook de pytest:
 
 ### Funcionamiento
 
-- ✅ Se captura automáticamente cuando un test **falla**
-- ✅ Se almacena en carpeta `screenshots/`
-- ✅ Nombre descriptivo con timestamp y nombre del test
-- ✅ Se incluye en el reporte HTML
+- Se captura automáticamente cuando un test **falla**
+- Se almacena en carpeta `screenshots/`
+- Nombre descriptivo con timestamp y nombre del test
+- Se incluye en el reporte HTML
 
 ### Estructura
 
@@ -502,7 +495,7 @@ screenshots/
 
 ---
 
-## 🌳 Control de Versiones con Git
+## Control de Versiones con Git
 
 El proyecto mantiene un historial limpio de commits documentando el progreso:
 
@@ -527,60 +520,60 @@ e1a2b3c docs: add SETUP.md with VS Code configuration
 
 ---
 
-## ✅ Requisitos Cumplidos de la Consigna
+## Requisitos Cumplidos de la Consigna
 
-### ✨ Tecnologías Utilizadas
+### Tecnologías Utilizadas
 
-- ✅ **Python** — Lenguaje principal
-- ✅ **Pytest** — Framework de testing
-- ✅ **Selenium WebDriver** — Automatización UI
-- ✅ **Requests** — Testing de APIs
-- ✅ **Git/GitHub** — Control de versiones
+- **Python** — Lenguaje principal
+- **Pytest** — Framework de testing
+- **Selenium WebDriver** — Automatización UI
+- **Requests** — Testing de APIs
+- **Git/GitHub** — Control de versiones
 
-### 🏗 Organización del Código
+### Organización del Código
 
-- ✅ Estructura clara con directorios: pages/, tests/, utils/, datos/
-- ✅ **Page Object Model (POM)** implementado
-- ✅ Buenas prácticas de programación
-- ✅ Comentarios descriptivos en todo el código
-- ✅ Nombres significativos en variables, métodos y clases
+- Estructura clara con directorios: pages/, tests/, utils/, datos/
+- **Page Object Model (POM)** implementado
+- Buenas prácticas de programación
+- Comentarios descriptivos en todo el código
+- Nombres significativos en variables, métodos y clases
 
-### 🧪 Pruebas de UI (Selenium)
+### Pruebas de UI (Selenium)
 
-- ✅ **5+ casos de prueba** (test_login, test_inventory, test_cart, test_cart_json, test_login_faker)
-- ✅ Flujos completos: login → navegación → carrito → checkout
-- ✅ Escenarios negativos: login con credenciales inválidas, usuario bloqueado
-- ✅ **Parametrización:** Datos desde CSV (`datos/data_login.csv`)
-- ✅ **Múltiples fuentes:** CSV, JSON (`datos/productos.json`), Faker
-- ✅ **Page Object Model:** Clases LoginPage, InventoryPage, CartPage
-- ✅ **Capturas automáticas:** Screenshots en fallos con timestamp
+- **5+ casos de prueba** (test_login, test_inventory, test_cart, test_cart_json, test_login_faker)
+- Flujos completos: login → navegación → carrito → checkout
+- Escenarios negativos: login con credenciales inválidas, usuario bloqueado
+- **Parametrización:** Datos desde CSV (`datos/data_login.csv`)
+- **Múltiples fuentes:** CSV, JSON (`datos/productos.json`), Faker
+- **Page Object Model:** Clases LoginPage, InventoryPage, CartPage
+- **Capturas automáticas:** Screenshots en fallos con timestamp
 
-### 📡 Pruebas de API
+### Pruebas de API
 
-- ✅ **3+ casos de prueba** (GET, POST, DELETE)
-- ✅ API pública ReqRes
-- ✅ Métodos HTTP cubiertos: GET, POST, DELETE
-- ✅ Validación de códigos de estado HTTP
-- ✅ Validación de estructura JSON
-- ✅ Assertions para múltiples escenarios
+- **3+ casos de prueba** (GET, POST, DELETE)
+- API pública ReqRes
+- Métodos HTTP cubiertos: GET, POST, DELETE
+- Validación de códigos de estado HTTP
+- Validación de estructura JSON
+- Assertions para múltiples escenarios
 
-### 📊 Reportes
+### Reportes
 
-- ✅ **Reportes HTML detallados** con pytest-html
-- ✅ Muestra: tests ejecutados, estado (pasado/fallado), duración
-- ✅ **Capturas de pantalla en fallos** incluidas en reportes
-- ✅ **Logging completo** con file y console handlers
+- **Reportes HTML detallados** con pytest-html
+- Muestra: tests ejecutados, estado (pasado/fallado), duración
+- **Capturas de pantalla en fallos** incluidas en reportes
+- **Logging completo** con manejadores de archivo y consola
 
-### 📝 Logging
+### Logging
 
-- ✅ **Sistema centralizado** en `utils/logger.py`
-- ✅ Registra pasos clave durante ejecución
-- ✅ Nivel DEBUG detallado para debugging
-- ✅ Archivos con timestamp en carpeta `logs/`
+- **Sistema centralizado** en `utils/logger.py`
+- Registra pasos clave durante ejecución
+- Nivel DEBUG detallado para debugging
+- Archivos con timestamp en carpeta `logs/`
 
-### 📚 Documentación
+### Documentación
 
-- ✅ **README.md completo** con:
+- **README.md completo** con:
   - Propósito del proyecto
   - Tecnologías utilizadas
   - Estructura del proyecto
@@ -589,56 +582,41 @@ e1a2b3c docs: add SETUP.md with VS Code configuration
   - Cómo interpretar reportes
   - Solución de problemas
 
-### 🌳 Control de Versiones
+### Control de Versiones
 
-- ✅ **Repositorio en GitHub público**
-- ✅ Historial de commits documentado
-- ✅ Rama principal `main` con código estable
-- ✅ Nombre de repositorio según consigna: `proyecto-final-automation-testing-ana-zambrano`
+- **Repositorio en GitHub público**
+- Historial de commits documentado
+- Rama principal `main` con código estable
+- Nombre de repositorio según consigna: `proyecto-final-automation-testing-ana-zambrano`
 
-### 🎯 Funcionalidad Esperada
+### Funcionalidad Esperada
 
-- ✅ Todas las pruebas ejecutan consistentemente
-- ✅ Pruebas independientes entre sí
-- ✅ Reportes claros y detallados
-- ✅ Estructura facilita agregar nuevas pruebas
-- ✅ Código reutilizable y mantenible
-
----
-
-## 📈 Reportes
-
-Los reportes HTML se generan en la carpeta `reports/` con timestamp:
-
-```text
-reports/
-├── report_20251210_145830.html
-├── report_20251210_150030.html
-└── ...
-```
-
-Para abrir el reporte en el navegador:
-
-```bash
-start reports/report_*.html  # Windows
-open reports/report_*.html   # macOS
-xdg-open reports/report_*.html # Linux
-```
+- Todas las pruebas ejecutan consistentemente
+- Pruebas independientes entre sí
+- Reportes claros y detallados
+- Estructura facilita agregar nuevas pruebas
+- Código reutilizable y mantenible
 
 ---
 
-## 📝 Características Principales
+## Reportes
 
-- ✨ **Page Object Model:** Separación clara entre localizadores y lógica de tests
-- ✨ **Fixtures Dinámicas:** Factory fixtures para reutilizar configuración
-- ✨ **Parametrización:** Tests parametrizados con CSV, JSON y generación dinámica
-- ✨ **Logging:** Sistema de logging con guardado en archivo y consola
-- ✨ **Screenshots:** Capturas automáticas en caso de fallos
-- ✨ **Reportes HTML:** Reportes detallados con pytest-html
+Ver la sección **Reportes HTML** (más arriba) para detalles sobre la generación y apertura de reportes.
 
 ---
 
-## 🐛 Solución de Problemas
+## Características Principales
+
+- **Page Object Model:** Separación clara entre localizadores y lógica de tests
+- **Fixtures Dinámicas:** Factory fixtures para reutilizar configuración
+- **Parametrización:** Tests parametrizados con CSV, JSON y generación dinámica
+- **Logging:** Sistema de logging con guardado en archivo y consola
+- **Screenshots:** Capturas automáticas en caso de fallos
+- **Reportes HTML:** Reportes detallados con pytest-html
+
+---
+
+## Solución de Problemas
 
 ### ChromeDriver no se descarga
 
@@ -648,17 +626,25 @@ xdg-open reports/report_*.html # Linux
 
 1. Asegúrate de tener **Chrome instalado**
 2. Verifica **conexión a internet**
-3. Limpia caché de webdriver-manager:
+3. Limpia la caché de `webdriver-manager` (WebDriver Manager usa `.wdm` en el home):
 
-   ```bash
-   webdriver-manager clean
-   ```
+  - Windows (PowerShell):
 
-4. Reinstala el package:
+    ```powershell
+    Remove-Item -Recurse -Force $env:USERPROFILE\.wdm
+    ```
 
-   ```bash
-   pip install --upgrade webdriver-manager
-   ```
+  - macOS / Linux:
+
+    ```bash
+    rm -rf ~/.wdm
+    ```
+
+4. Reinstala/actualiza el package si fuera necesario:
+
+  ```bash
+  pip install --upgrade webdriver-manager
+  ```
 
 ### Problema con permisos de ejecución en macOS/Linux
 
@@ -666,7 +652,8 @@ xdg-open reports/report_*.html # Linux
 
 ```bash
 chmod +x run_tests.py
-chmod +x open_in_gitbash.ps1
+# Si tiene un script shell para abrir Git Bash en macOS/Linux: hacerlo ejecutable
+# chmod +x open_in_gitbash.sh
 ```
 
 ### El archivo JSON de productos no se encuentra
@@ -716,9 +703,9 @@ chmod +x open_in_gitbash.ps1
 
 ---
 
-## 📞 Contacto e Información del Autor
+## Contacto e Información del Autor
 
-**Nombre:** Ana Carolina Zambrano
+**Nombre:** Ana Laura Zambrano
 
 **GitHub:** [Anapitter](https://github.com/Anapitter)
 
@@ -726,7 +713,7 @@ chmod +x open_in_gitbash.ps1
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es parte del curso de **Automatización Testing & QA** y está disponible para uso educativo.
 
@@ -734,21 +721,18 @@ Este proyecto es parte del curso de **Automatización Testing & QA** y está dis
 
 ---
 
-## 🎓 Habilidades Demostradas
+## Habilidades Demostradas
 
-- ✅ Automatización de pruebas UI con Selenium
-- ✅ Testing de APIs REST
-- ✅ Patrones de diseño (Page Object Model)
-- ✅ Fixtures y parametrización en Pytest
-- ✅ Generación de reportes visuales
-- ✅ Sistema de logging profesional
-- ✅ Control de versiones con Git
-- ✅ Documentación técnica completa
-- ✅ Buenas prácticas de desarrollo
-- ✅ Testing independiente y robusto
+- Automatización de pruebas UI con Selenium
+- Testing de APIs REST
+- Patrones de diseño (Page Object Model)
+- Fixtures y parametrización en Pytest
+- Generación de reportes visuales
+- Sistema de logging profesional
+- Control de versiones con Git
+- Documentación técnica completa
+- Buenas prácticas de desarrollo
+- Testing independiente y robusto
 
----
 
-### Conclusión
 
-Gracias por revisar este proyecto. Espero que demuestre las habilidades adquiridas en automatización testing.
