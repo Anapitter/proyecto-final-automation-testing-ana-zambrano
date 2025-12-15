@@ -1,11 +1,10 @@
-## Proyecto Final - Framework de Automatización de Pruebas
+# Proyecto Final - Framework de Automatización de Pruebas
 
 **Autora:** Ana Laura Zambrano
 
 **Fecha:** Diciembre 2025
 
 **Repositorio:** [proyecto-final-automation-testing-ana-zambrano](https://github.com/Anapitter/proyecto-final-automation-testing-ana-zambrano)
-
 
 ## Propósito del Proyecto
 
@@ -50,15 +49,15 @@ entrega-final-automation-testing-ana-zambrano/
 ├── run_tests.py                # Script para ejecutar todas las pruebas
 │
 ├── pages/                      # Page Objects para tests UI
-│   ├── __init__.py
+│   ├── _init_.py
 │   ├── login_page.py           # Página de login
 │   ├── inventory_page.py       # Página de inventario
 │   └── cart_page.py            # Página del carrito
 │
 ├── tests/                      # Tests del proyecto
-│   ├── __init__.py
+│   ├── _init_.py
 │   ├── ui/                     # Tests de interfaz de usuario
-│   │   ├── __init__.py
+│   │   ├── _init_.py
 │   │   ├── test_login.py       # Tests de autenticación
 │   │   ├── test_inventory.py   # Tests de inventario
 │   │   ├── test_cart.py        # Tests del carrito
@@ -66,13 +65,13 @@ entrega-final-automation-testing-ana-zambrano/
 │   │   └── test_login_faker.py # Tests con datos generados (Faker)
 │   │
 │   └── api/                    # Tests de API REST
-│       ├── __init__.py
+│       ├── _init_.py
 │       ├── test_api_get.py     # Test GET
 │       ├── test_api_post.py    # Test POST
 │       └── test_api_delete.py  # Test DELETE
 │
 ├── utils/                      # Utilidades y helpers
-│   ├── __init__.py
+│   ├── _init_.py
 │   ├── datos.py                # Lectura de datos CSV
 │   ├── lector_json.py          # Lectura de datos JSON
 │   └── logger.py               # Configuración de logging
@@ -85,7 +84,6 @@ entrega-final-automation-testing-ana-zambrano/
 │   └── style.css               # Estilos (si aplica)
 │
 └── .gitignore                  # Archivos ignorados por Git
-```
 
 ---
 
@@ -244,7 +242,7 @@ Parametrizado con datos desde `datos/data_login.csv`:
 
 **Implementación:**
 
-- Uso de fixture `login_in_driver` (patrón *factory* / factory pattern)
+- Uso de fixture `login_in_driver` (patrón _factory_ / factory pattern)
 - Validación de mensajes de error
 - Captura automática en fallos
 
@@ -522,7 +520,7 @@ e1a2b3c docs: add SETUP.md with VS Code configuration
 
 ## Requisitos Cumplidos de la Consigna
 
-### Tecnologías Utilizadas
+### Tecnologías Usadas
 
 - **Python** — Lenguaje principal
 - **Pytest** — Framework de testing
@@ -597,9 +595,7 @@ e1a2b3c docs: add SETUP.md with VS Code configuration
 - Estructura facilita agregar nuevas pruebas
 - Código reutilizable y mantenible
 
----
-
-## Reportes
+--
 
 Ver la sección **Reportes HTML** (más arriba) para detalles sobre la generación y apertura de reportes.
 
@@ -628,19 +624,13 @@ Ver la sección **Reportes HTML** (más arriba) para detalles sobre la generaci�
 2. Verifica **conexión a internet**
 3. Limpia la caché de `webdriver-manager` (WebDriver Manager usa `.wdm` en el home):
 
-  - Windows (PowerShell):
+- Windows (PowerShell):
 
-    ```powershell
-    Remove-Item -Recurse -Force $env:USERPROFILE\.wdm
-    ```
+  ```powershell
+  Remove-Item -Recurse -Force $env:USERPROFILE\.wdm
+  ```
 
-  - macOS / Linux:
-
-    ```bash
-    rm -rf ~/.wdm
-    ```
-
-4. Reinstala/actualiza el package si fuera necesario:
+4.Reinstala/actualiza el package si fuera necesario:
 
   ```bash
   pip install --upgrade webdriver-manager
@@ -733,6 +723,3 @@ Este proyecto es parte del curso de **Automatización Testing & QA** y está dis
 - Documentación técnica completa
 - Buenas prácticas de desarrollo
 - Testing independiente y robusto
-
-
-
